@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>مكتبة الأوامر الذكية — لوحة التشغيل</title>
+<title>Smart Prompt Library — مكتبة الأوامر الذكية</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -138,11 +138,12 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit
 .scrim{position:fixed;inset:0;background:rgba(22,34,29,.45);opacity:0;pointer-events:none;transition:opacity .18s}
 .scrim.on{opacity:1;pointer-events:auto}
 .sheet{
-  position:fixed;inset-block:0;inset-inline-start:0;width:min(760px,100%);
-  background:var(--ground);border-inline-end:1px solid var(--line);
+  position:fixed;top:0;bottom:0;left:0;width:min(760px,100%);
+  background:var(--ground);border-right:1px solid var(--line);
   transform:translateX(-100%);transition:transform .22s ease;overflow:auto;z-index:5;
+  visibility:hidden;pointer-events:none;
 }
-.sheet.on{transform:none}
+.sheet.on{transform:none;visibility:visible;pointer-events:auto}
 .sheet-head{
   position:sticky;top:0;background:var(--ink);color:#EDF0EC;padding:16px 22px;
   display:flex;gap:14px;align-items:flex-start;z-index:2;
@@ -249,8 +250,8 @@ button,input,select,textarea{font-family:inherit;font-size:inherit;color:inherit
 <header class="masthead">
   <div class="masthead-in">
     <div class="brand">
-      <h1>مكتبة الأوامر الذكية</h1>
-      <span class="sub">إدارة صيانة أصول التجميل الطبيعي — مدينة العين</span>
+      <h1>Smart Prompt Library</h1>
+      <span class="sub">Natural Beautification Asset Maintenance · مدينة العين</span>
       <span class="tally">الإصدار الأول · <b id="tally">120</b> أمرًا · <b>20</b> محورًا</span>
     </div>
     <nav class="tabs" role="tablist">
